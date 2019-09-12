@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>日期模块 - layui</title>
 
-<link rel="stylesheet" href="../src/css/layui.css">
+<link rel="stylesheet" href="../dist/css/layui.css">
 
 <style>
 body{padding: 50px 100px;}
@@ -17,6 +17,12 @@ body{padding: 50px 100px;}
 </style>
 </head>
 <body>
+  双月单选日期：
+<div class="layui-inline">
+  <input type="text" class="layui-input" id="test0">
+</div>
+
+<br><br><hr><br>
 
 日期时间范围选择：
 <div class="layui-inline">
@@ -108,11 +114,30 @@ body{padding: 50px 100px;}
 <div class="layui-inline" id="test10"></div>
 <div class="layui-inline" id="test11" style="margin-left: 30px;"></div>
 
-<script src="../src/layui.js" charset="utf-8"></script>
+<script src="../dist/layui.js" charset="utf-8"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
+
 <script>
+var now = moment().format('YYYY-MM-DD')
+
 layui.use('laydate', function(){
   var laydate = layui.laydate;
   
+  //双控件
+  laydate.render({
+    elem: '#test0' //指定元素
+    ,trigger: 'click'
+    ,calendar: true
+    ,rangeSameDay:true
+    ,min:now
+    //,lang: 'en'
+    ,done: function(value, date, endDate){
+      console.log(value, date, endDate);
+    }
+    ,change: function(value, date, endDate){
+      console.log(value, date, endDate);
+    }
+  });
   //双控件
   laydate.render({
     elem: '#test1' //指定元素
