@@ -593,10 +593,26 @@ hr, .layui-timeline-item:before{background-color: #d2d2d2;}
 .layui-input-inline{display: inline-block; vertical-align: middle;}
 .layui-form-item .layui-input-inline{float: left; width: 190px; margin-right: 10px;}
 .layui-form-text .layui-input-inline{width: auto;}
+/* 垂直排列的表单元素 */
+.layui-form.vertical .layui-form-label{
+  float: none;
+  padding-left: 0;
+  text-align: left;
+}
+.layui-form.vertical .layui-form-item{
+   margin-bottom: 0;
+}
+.layui-form .layui-form-item.inline .layui-form-label{position: relative; float: left; display: block; padding: 6px 15px;  width: 80px; font-weight: 400; line-height: 20px; text-align: right;}
 
+.layui-form.vertical .layui-input-block{
+  margin-left: 0;
+}
+.layui-form .layui-form-item.inline .layui-input-block{
+  margin-left: 110px;
+}
 /* 分割块 */.layui-form-mid{position: relative; float: left; display: block; padding: 5px 0 !important; line-height: 20px; margin-right: 10px;}
 /* 警告域 */.layui-form-danger:focus
-,.layui-form-danger+.layui-form-select .layui-input{border-color: #FF5722 !important;}
+,.layui-form-danger+.layui-form-select .layui-input{border-color: red !important;}
 
 
 /* 下拉选择 */.layui-form-select{position: relative;}

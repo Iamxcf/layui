@@ -659,7 +659,7 @@ layui.define('layer', function(exports){
                   }
                 }
                 return othis;
-              }(), {tips: 1});
+              }(), {tips: [2,'#e63737'],time:1000*3600});
             } else if(verType === 'alert') {
               layer.alert(errorText, {title: '提示', shadeClose: true});
             } else {

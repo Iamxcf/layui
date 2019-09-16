@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优行商旅</title>
+    <link rel="stylesheet" href="../dist/css/layui.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+        .login-header{
+            height: 200px;
+            background: #fff;
+        }
+        .layui-main.login{
+            height: 100%;
+        }
+        .logo-icon{
+            float: left;
+        }
+        .logo-icon-test{
+            display: inline-block;
+        }
+        .logo-icon-test span{
+            color: #959595;
+            font-size: 14px;
+        }
+        .contact-number{
+            float: right;
+            color: #b2b2b2;
+            font-size: 18px;
+            line-height: 96px;
+        }
+        .login-main{
+            position: relative;
+            min-height: 600px;
+            height: calc(100% - 200px);
+            background-image: url(../dist/images/login-bg.jpg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            color: #eee;
+            font-size: 12px;
+            
+        }
+        .form-container{
+            
+            position: absolute;
+            right: 300px;
+            top: 60px;
+            border-radius: 6px;
+            background: rgba(0,0,0,.5);
+        }
+        .user-titie{
+            height: 40px;
+            line-height: 40px;
+            padding-left: 30px;
+            border-bottom: 5px solid #999;
+            font-size: 14px;
+
+        }
+        .user-titie>i{
+            background: #fff;
+            color: #3280fc;
+            margin-right: 6px;
+            vertical-align: bottom;
+        }
+        .layui-form.login{
+            min-width: 240px;
+            min-height: 200px;
+            padding:30px 30px 20px 30px;
+        }
+        .layui-form.login .layui-form-checkbox span{
+            color: #eee;
+        }
+        .layui-form.login .layui-input-block>.layui-icon{
+            position: absolute;
+            top: 6px;
+            left: 10px;
+            color: #555;
+        }
+        .layui-form.login .layui-input-block>input{
+            text-indent: 36px;
+        }
+        .other-link{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .other-link .link{
+            color: #eee;
+            margin-right: 30px;
+            text-decoration: underline;
+
+        }
+        .other-link .link:hover{
+            text-decoration: underline;
+            color: #3280fc;
+        }
+        .form-footer{
+            height: 30px;
+            border-top: 5px solid #999;
+        }
+        .login .layui-btn{
+            margin-top: 15px;
+            width: 120px;
+        }
+        .switch-language{
+            height: 120px;
+        }
+        .header-bottom{
+            height: 80px;
+            
+        }
+        .logo-icon{
+            height: 60px;
+        }
+        .logo-icon img{
+            height: 100%;
+            width: auto;
+        }
+        .switch-language-text{
+            text-align: right;
+        }
+        .switch-language-text a{
+            color: #3280fc;
+        }
+        .switch-language-text a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 登录页面头部  开始-->
+    <div class="login-header">
+        <div class="layui-main login">
+            <div class="switch-language">
+                <p class="switch-language-text">
+                    <a href="">中文</a>
+                </p>
+            </div>
+            <div class="header-bottom">
+                <div class="logo-icon">
+                    <img src="/E:\文件\商旅改版第一版需求文档/logo.png" alt="">
+                </div>
+                <p class="contact-number">企业商旅系统服务热线：400-666-3232</p>
+            </div>
+        </div>
+    </div>
+    <!-- 登录页面头部  结束-->
+
+    <!-- 主体区域  开始-->
+    <div class="login-main">
+        <div class="form-container">
+            <p class="user-titie">
+                <i class="layui-icon layui-icon-friends"></i>
+                <span>用户登录</span>
+            </p>
+            <form action="" class="layui-form login vertical">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="userName" lay-verify="userName" lay-verType="tips" lay-reqText="用户名不能为空" required placeholder="手机号/邮箱" autocomplete="off" class="layui-input" >
+                        <i class="layui-icon layui-icon-username"></i>
+                    </div>
+                </div>
+                <div class="layui-form-item login-type-number">
+                    <label class="layui-form-label">企业名称/ID</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="companyName" lay-verify="companyName" lay-verType="tips"  autocomplete="off" class="layui-input" >
+                    </div>
+                </div>
+                <div class="layui-form-item login-type-number">
+                    <label class="layui-form-label">工号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="jobNumber" lay-verify="jobNumber" lay-verType="tips" lay-reqText="不能为空" required placeholder="工号" autocomplete="off" class="layui-input" >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="password" lay-verify="password" lay-verType="tips" autocomplete="off" class="layui-input" placeholder="请输入密码">
+                        <i class="layui-icon layui-icon-password"></i>
+
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                      <input type="checkbox" name="autoLogin" lay-skin="primary" title="自动登录">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="*" >登录</button>
+                    </div>
+                </div>
+            </form>
+            <div class="other-link">
+                <a href="" class="link">忘记密码</a>
+                <a href="" class="link">注册</a>
+                <a href="javascript:;" class="link login-type">工号登录</a>
+            </div>
+            <div class="form-footer"></div>
+        </div>
+        
+    </div>
+    <!-- 主体区域  结束-->
+    <script src="../dist/layui.js"></script>
+    <script>
+        layui.use(['layer','form'],function(){
+            var $ = layui.jquery
+            ,layer = layui.layer
+            ,form = layui.form
+            $('.login-main').on('click','.login-type',function(e){
+                var _this = $(this)
+                console.log(123)
+            })
+            form.verify({
+                userName: function(value){
+                    if(!value){
+                        return '用户名不能为空';
+                    }
+                }
+                ,password: function(value){
+                    var reg = /(.+){6,12}$/
+                    if(!value){
+                        return '密码不能为空'
+                    }else if(!reg.test(value)){
+                        return '密码必须6到12位'
+                    }
+                }
+                 
+            });
+            form.on('submit(*)', function(data){
+                console.log(data.elem) //被执行事件的元素DOM对象，一般为button对象
+                console.log(data.form) //被执行提交的form对象，一般在存在form标签时才会返回
+                console.log(data.field) //当前容器的全部表单字段，名值对形式：{name: value}
+                return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+            });
+        })        
+    </script>
+</body>
+</html>
